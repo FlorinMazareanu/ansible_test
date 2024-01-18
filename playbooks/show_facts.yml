@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+
+  - name: Show hostnames and their IP addresses
+    ansible.builtin.debug:
+      msg: Host {{ inventory_hostname }} - {{ ansible_default_ipv4.address  }}
