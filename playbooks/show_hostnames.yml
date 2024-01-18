@@ -8,3 +8,4 @@
   - name: show hostname
     ansible.builtin.debug:
       var: inventory_hostname
+      var: ansible_default_ipv4.address
