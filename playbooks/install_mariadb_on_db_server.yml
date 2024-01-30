@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    apt:
+      update_cache: yes
+
+- hosts: db_servers
+  become: true
+  tasks:
+
+  - name: install maria db on db server
+    apt:
+      name: mariadb-server
+      state: latest
