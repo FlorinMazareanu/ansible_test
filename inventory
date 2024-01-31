@@ -6,3 +6,6 @@ srvmn2
 
 [file_servers]
 srvmn3
+
+[workstations]
+srvcn1
