@@ -1,0 +1,13 @@
+---
+
+- hosts: web_servers
+  become: true
+  tasks:
+
+  - name: copy homepage to web server
+    copy:
+      src: ~/ansible_test/files/homepage.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
